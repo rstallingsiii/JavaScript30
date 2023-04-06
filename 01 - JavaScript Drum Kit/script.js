@@ -7,9 +7,10 @@ playSound = (e) => {
   key.classList.add("playing");
 
 };
+
 removeTransition = (e) => {
-  if(e.propertyName !== 'transform')return;
-  this.classList.remove('playing');
+  if(e.propertyName !== 'transform') return;
+  e.target.classList.remove('playing');
 }
 
 const keys = document.querySelectorAll(`.key`);
